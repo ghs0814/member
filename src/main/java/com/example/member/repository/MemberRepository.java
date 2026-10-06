@@ -1,0 +1,10 @@
+package com.example.member.repository;
+
+import com.example.member.domain.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MemberRepository  extends JpaRepository<Member, Long> {
+
+    boolean existsByEmail(String email); //자동으로 쿼리 구현해줌
+}
+
